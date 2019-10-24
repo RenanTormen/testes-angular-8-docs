@@ -1,3 +1,6 @@
-<p>
-detalhes-produto works!
-</p>
+<h2>Detalhes do Produto</h2>
+<div *ngIf="produto.description">
+    <h3>{{produto.name}}</h3>
+    <h4>{{produto.description}}</h4>
+    <h5><b>{{produto.price | currency}}</b></h5>
+</div>
