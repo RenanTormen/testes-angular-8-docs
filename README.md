@@ -1,3 +1,1 @@
-# angular-vn3wkx
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-vn3wkx)
+# Este é um repositório feito para testes seguindo leitura da documentação do Angular 8.
