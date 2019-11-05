@@ -1,0 +1,6 @@
+<h3>Carrinho de Compras</h3>
+
+<div *ngFor="let produto of carregarItensCarrinho()" class="cart-item">
+    <span>{{produto.name}}</span>
+    <span>{{produto.price | currency }}</span>
+</div>

@@ -9,13 +9,17 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { AlertaProdutosComponent } from './alerta-produtos/alerta-produtos.component';
 import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.component';
 
+import { CarrinhoComprasService } from './carrinho-compras.service';
+import { CarrinhoComprasComponent } from './carrinho-compras/carrinho-compras.component';
+
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
-      { path: 'produtos/:idProduto', component: DetalhesProdutoComponent}
+      { path: 'produtos/:idProduto', component: DetalhesProdutoComponent},
+      { path: 'carrinho', component: CarrinhoComprasComponent}
     ])
   ],
   declarations: [
@@ -23,9 +27,11 @@ import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.co
     TopBarComponent,
     ProductListComponent,
     AlertaProdutosComponent,
-    DetalhesProdutoComponent
+    DetalhesProdutoComponent,
+    CarrinhoComprasComponent
   ],
-  bootstrap: [ AppComponent ]
+  bootstrap: [ AppComponent ],
+  providers: [CarrinhoComprasService]
 })
 export class AppModule { }
 

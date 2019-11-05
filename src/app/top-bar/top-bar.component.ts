@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {RouterModule} from '@angular/router'
+
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
