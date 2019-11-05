@@ -11,6 +11,8 @@ import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.co
 
 import { CarrinhoComprasService } from './carrinho-compras.service';
 import { CarrinhoComprasComponent } from './carrinho-compras/carrinho-compras.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormasDeEnvioComponent } from './formas-de-envio/formas-de-envio.component'
 
 @NgModule({
   imports: [
@@ -19,8 +21,10 @@ import { CarrinhoComprasComponent } from './carrinho-compras/carrinho-compras.co
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'produtos/:idProduto', component: DetalhesProdutoComponent},
-      { path: 'carrinho', component: CarrinhoComprasComponent}
-    ])
+      { path: 'carrinho', component: CarrinhoComprasComponent},
+      { path: 'formasDeEnvio', component: FormasDeEnvioComponent}
+    ]),
+    HttpClientModule
   ],
   declarations: [
     AppComponent,
@@ -28,7 +32,8 @@ import { CarrinhoComprasComponent } from './carrinho-compras/carrinho-compras.co
     ProductListComponent,
     AlertaProdutosComponent,
     DetalhesProdutoComponent,
-    CarrinhoComprasComponent
+    CarrinhoComprasComponent,
+    FormasDeEnvioComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [CarrinhoComprasService]

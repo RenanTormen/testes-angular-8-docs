@@ -16,7 +16,7 @@ export class DetalhesProdutoComponent implements OnInit {
 
   constructor(
     private rota: ActivatedRoute,
-    private carrinhoCompras: CarrinhoComprasService
+    private carrinhoComprasService: CarrinhoComprasService
   ) {}
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class DetalhesProdutoComponent implements OnInit {
 
   adicionarAoCarrinho(produto){
     window.alert('Seu produto foi adicionado ao carrinho com sucesso!')
-    this.carrinhoCompras.adicionarItem(produto);
+    this.carrinhoComprasService.adicionarItem(produto);
   }
 }
 

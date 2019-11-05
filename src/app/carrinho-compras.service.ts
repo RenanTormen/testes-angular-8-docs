@@ -1,11 +1,16 @@
 import { Injectable } from '@angular/core';
 
+import {HttpClient} from '@angular/common/http'
+
 @Injectable({
   providedIn : 'root'
 })
+
 export class CarrinhoComprasService {
   itens = [];
-  constructor() {
+  constructor(
+    private httpClientHandler : HttpClient
+  ) {
   }
 
   adicionarItem(item){
@@ -19,5 +24,9 @@ export class CarrinhoComprasService {
 
   getItens(){
     return this.itens;
+  }
+
+  getFormasDeEnvio(){
+    return this.httpClientHandler.get('/assets/shipping.json');
   }
 }

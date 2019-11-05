@@ -1,0 +1,5 @@
+<h3>Formas de Envio</h3>
+<div class="shipping-item" *ngFor="let formaDeEnvio of getFormasDeEnvio() | async">
+  <span>{{formaDeEnvio.type}}</span>
+  <span>{{formaDeEnvio.price | currency}}</span>
+</div>
